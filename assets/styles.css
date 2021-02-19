@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*----------PARTE RESPONSIVE---------*/
+/* parte del menu */
+.header{
+    position: fixed;
+    position: sticky;
+    height: 44px;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 44px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+}
+
+.header ul a{
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+}
+
+.header nav ul a:hover{
+    text-decoration: line-through;
+}
+
+.header ul a:active{
+    color: rgba(6,10,36,0.56);
+}
+
+.header .logo{
+    float: left;
+    display: block;
+    padding: 10px 20px;
+}
+
+.header nav .menu{
+    clear: both;
+    /* display: block; */
+    background-color: #0000EC;
+    max-height: 300px;
+    transition: max-height .2s ease-out;
+}
+
+.header nav .menu-icon{
+    padding: 20px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header nav .menu-icon .nav-icon{
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.header nav .menu-icon .nav-icon:before{
+    background: #333;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2 ease-out;
+    top: 5px;
+}
+
+.header nav .menu-icon .nav-icon:after{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    transition: all .2 ease-out;
+    top: -5px;
+}
+
+.header .menu-btn{
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu{
+    max-height: 300px;
+    display: block;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+
+.header nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+   transform: rotate(-45deg);
+   top: 0; 
+}
+
+.header nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+/*Fin del menu*/
+/*Parte del Wrapper*/
+.wrapper {
+    margin-left: 16px;
+    margin-top: 29px;
+    overflow: hidden;
+    line-height: 50px;
+    top: 29px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: lighter;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.blue {
+    color: blue;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 22px;
+    color: #060A24;
+    margin: auto;
+}
+
+.primero{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.boton {
+    background: #00F3BB;    
+    color: #060A24;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: medium;
+    width: 288px;
+    height: 48px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+ .mitad {
+    margin-top: 36px;
+    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+ }
+#boton:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to left, #0000FF, #00F0B8);
+}
+/*Fin de Wrapper*/
+/*Empezamos con paralelogramo*/
+.paralelogramo {
+    top: 20px;
+    position: relative;
+    clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%); 
+    background-image: linear-gradient(to top, #0000A3, #0000FF);
+    display: flex;
+    justify-content: center;
+    color: white;
+ }
+
+.episodio {
+    margin-top: 64px;
+    margin-bottom: 120px;
+    margin-left: 11px;
+    margin-right: 11px;
+    display: flex;
+    justify-content: center;  
+}
+
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 16px;
+    font-size: 36px;
+    font-weight: lighter;
+    margin-bottom: 21px;
+ }
+
+ iframe {
+    height: 232px;
+    width: 100%;
+    border: 0px;
+    background-color: transparent;
+}
+/*Terminamos con paralelogramo*/
+/*Aca empezamos con el phone*/
+.section {
+    position: relative;
+    top: -80px;
+}
+
+h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: lighter;
+}
+
+.texto {
+    display: inline-block;
+    margin: 27px 16px 0px 16px;
+    height: 346px;
+}
+.abajo {
+    display: flex;
+    justify-content: center;
+}
+.phone {
+    width: 320px;
+    height: 519px;
+}
+
+.phonep {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+    height: 288px;
+    margin-top: 24px;
+}
+/*Aca termina phone*/
+/*Aca empieza la galeria*/
+.foto {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+h4 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #060A24;
+    margin: 48px 16px 0px 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-top: -30px;
+    max-width: 90%;
+    margin-bottom: 14px;
+}
+/*Aca termina la galeria*/
+/*Aca empieza temario*/
+h5 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #060A24;
+    margin: 48px 16px 0px 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-top: 30px;
+}
+
+.temas {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    height: 104x;
+    width: auto;
+    margin: 35px 108px 0px 108px;
+}
+
+.titulo {
+    text-align: center;
+    width: 240px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #060A24;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 11px 0px 30px 40px;
+}
+/*Aca termina temario*/
+/*Aca empieza novedades*/
+h6 {
+    font-size: 36px;
+    font-weight: lighter;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.novedades {
+    height: 341px;
+    width: 100%;
+    clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(to top, #0000A3, #0000FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.nov{
+    margin-top: -20px;
+}
+
+.orden{
+    margin-top: 30px;
+}
+
+.novedades2 {
+    height: 126px;
+    width: 288px;
+    text-align: center;
+}
+
+#boton {
+    background: #00F3BB;
+    color: #060A24;
+    width: 288px;
+    height: 48px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    border: none;
+}
+/*Aca termina novedades*/
+/*Aca empieza el footer*/
+.footer {
+    height: 121px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.copy{
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.cajon {
+    margin-top: 24px;
+}
+
+i { 
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+}
+
+.foot {
+    width: 234px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+/*Fin del footer*/
+footer + div {
+    opacity: 0;
+}
+/*Mediaqueres*/
+
+@media screen and (min-width: 800px) {
+    /*WRAPPER*/
+    .wrapper {
+        display: inline-block
+    }
+    /*FIN WRAPPER*/
+    /*EPISODIOS*/
+    .paralelogramo {
+        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    }
+    .episodio {
+        margin-top: 100px;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    iframe {
+        width: 385px;
+        width: 100%;
+        border: 0px;
+        background-color: transparent;        
+
+    }
+    .seccion1 {
+        margin-bottom: 5px;
+    }
+    .seccion2 {
+        margin-top: 5px;
+    }
+    /*NOSOTROS*/
+    .section {
+        display: flex;
+        justify-content: center;
+        top: -50px;
+    }
+    .texto {
+        display: inline-block;
+        margin-top: 90px;
+        width: 464px;
+        margin-left: 10px;
+    }
+    /*FIN NOSOTROS*/
+    /*GALERIA*/
+    h4{
+        margin-bottom: 20px;
+    }
+    /*FIN DE GALERIA*/
+    /*TEMARIO*/
+    .temas {
+        height: 300px;
+        top: 64px;
+    }
+    .cuadro {
+        height: 130px;
+        display: flex;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+    }
+    .icon {
+        align-items: center;
+        width: 150px;
+    }
+    .img {
+        margin: 0;
+    }
+    .titulo {
+        width: 180px;
+        margin-left: -10px;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 16px;
+    }
+    /*FIN DE TEMARIO*/
+    /*FOOTER*/
+    .cajon {
+        margin-top: 0;
+        height: 95px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .copy {
+        margin-left: 100px;
+        font-size: 16px;
+    }
+    .foot {
+        margin-top: 0;
+        margin-right: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer {
+        height: 95px;
+    }
+    /*FIN FOOTER*/
+}
+
+@media screen and (min-width:1270px) {
+    /*MENU*/
+    .header{
+        height: 80px;
+    }
+    .header .logo{
+        padding: 0;
+        margin-left: 100px;
+    }
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 30px 30px;
+    }
+    .header nav .menu {
+        clear: none;
+        float: right;
+        display: block;
+        max-height: none;
+        height: 80px;
+        margin-right: 100px;
+        background-color: white;
+    }
+    .header ul a{
+        color: #060A24;
+    }
+    .header ul a:hover{
+        color:#00F3BB;
+        text-decoration: line-through;
+        background-color: white;
+    }
+    .header ul a:active{
+        color: rgba(6,10,36,0.56);
+    }
+    .header nav .menu-icon {
+        display: none;
+    }
+    .logo {
+        margin-left: 100px;
+        margin: 26px 26px;
+        display: flex;
+        width: 36px;
+        height: 36px;
+    }
+    /*FIN MENU*/
+    /*WRAPPER*/
+    .wrapper {
+        max-width: 1000px;
+        width: 90%;
+        line-height: 50px;
+        margin: 120px 500px 5px 200px;
+    }
+    h1 {
+        font-size: 64px;
+        font-weight: bold;
+    }
+    .primero{
+        display: inline-block;
+    }
+    p {
+        font-size: 16px;
+        line-height: 50px;
+        margin-top: 15px;
+        max-width: 628px;
+    }
+    .mitad {
+        display: block;
+    }
+    #boton {
+        width: 245px;
+        height: 56px;
+        font-size: 18px;
+        padding: 18px;
+    }
+    /*FIN WRAPPER*/
+    /*EPISODIOS*/
+    .episodio {
+        left: 200px;
+        top: 186px;
+        align-items: center;
+        justify-content: center;
+    }
+    .paralelogramo {
+        height: 1040px;
+        width: 100%;
+        clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    h2 {
+        font-size: 48px;
+        margin: 0px 0px 26px 100px;
+    }
+    iframe {
+        height: 232px;
+        width: 100%;
+        border: 0px;
+        background-color: transparent;
+    }
+    .seccion1 {
+        width: 1240px;
+        display: flex;
+    }
+    .seccion2 {
+        margin-top: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .spo1{
+        margin-right: 36px;
+    }
+
+    .spo2{
+        margin-left: 36px;
+    }
+    /*FIN DE EPISODIOS*/
+    /*NOSOTROS*/
+    .section {
+        display: flex;
+        justify-content: center;
+        top: -150px;
+    }
+    .abajo {
+        margin-left: -90px;
+    }
+    .phone {
+        width: 437.6px;
+        height: 660px;
+        margin-left: 50px;
+    }
+    .texto {
+        display: inline-block;
+        margin-top: 200px;
+        width: 464px;
+        margin-left: 80px;
+    }
+    h3 {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 48px;
+    }
+    .phonep {
+        height: 204px;
+    }
+    /*FIN DE NOSOTROS*/
+    /*GALERIAS*/
+    h4 {
+        font-size: 48px;
+        margin-left: 200px;
+        margin-bottom: 36px;
+    }
+    .foto {
+        height: 364px;
+        width: 33.3%;
+    }
+    .galeria1 {
+        display: flex;
+    }
+    
+    .galeria2 {
+        display: flex;
+    }
+    /*FIN DE GALERIAS*/
+    /*TEMARIO*/
+    h5 {
+        font-size: 48px;
+        margin-left: 200px;
+    }
+    .temas {
+        height: 300px;
+        top: 64px;
+    }
+    .cuadro {
+        height: 130px;
+        display: flex;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+    }
+    .icon {
+        align-items: center;
+        width: 260px;
+    }
+    .img {
+        margin: 0;
+    }
+    .titulo {
+        width: 187.5px;
+        font-size: 24px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        margin-left: 35px;
+    }
+    /*FIN DE TEMARIO*/
+    /*NOVEDADES*/
+    .novedades {
+        height: 518px;
+        width: 100%;
+    }
+    h6 {
+        font-size: 48px;
+    }
+    .novedades2 {
+        height: 120px;
+        width: 692px;     
+    }
+    .orden {
+        display: flex;
+        justify-content: center;
+    }
+    #boton {
+        margin-top: 36px;
+        width: 345px;
+        height: 56px;   
+    }
+    /*FIN DE NOVEDADES*/
+    /*FOOTER*/
+    .cajon {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .copy {
+        margin-left: 100px;
+        font-size: 16px;
+    }
+    .foot {
+        margin-top: 0;
+        margin-right: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer + div {
+        opacity: 0;
+    }
+    /*FIN DE FOOTER*/
+}
